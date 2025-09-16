@@ -7,7 +7,5 @@ if (a==b) {
 } else {
     console.log("not anagram");
 }
-
-
                   
 

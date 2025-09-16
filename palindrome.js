@@ -1,12 +1,11 @@
-let arr=['a','b','c','b','a'];
-let b=[...arr];
-console.log(arr);
-b.reverse();
-console.log(b);
+let str="madam";
+let reversed=str.split("").reverse().join("");
+console.log(str);
+console.log(reversed);
 let flag;
-for(let i=0;i<arr.length;i++)
+for(let i=0;i<str.length;i++)
 {
-    if(arr[i]==b[i])
+    if(str[i]==reversed[i])
     {
         flag=1;
     }
