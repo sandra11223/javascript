@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Array display program</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getArray(size){
+             let arr=[];
+             for(let i=0;i<size;i++){
+                arr[i] = parseInt(prompt(`Enter element ${i + 1}:`));
+             }
+             return arr;
+        }
+       function displayArray(arr){
+        console.log("the array elements are:");
+        for(let i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+       }
+     function main(){
+     let size = parseInt(prompt("Enter the size of the array:"));
+     let arr = getArray(size); 
+     displayArray(arr);
+    }  
+    main(); 
+    </script>
+</body>
+</html>

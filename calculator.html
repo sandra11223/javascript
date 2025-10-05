@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    .container {
+      display: inline-grid;
+      grid-template-columns: auto auto auto auto;
+      background-color: rgb(222, 226, 227);
+      padding: 5px;
+    }
+    .a {
+      background-color: #98d6e3;  
+      box-shadow: 3px 3px 3px rgb(79, 77, 77);
+      padding: 15px;
+      margin: 5px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      user-select: none;
+    }
+    .item1 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      padding: 15px;
+      margin: 5px;
+      background-color: rgb(250, 250, 251);
+      text-align: right;
+      font-size: 24px;
+      min-height: 40px;
+      box-shadow: inset 2px 2px 5px #ccc;
+    }
+    .item2 {
+      background-color: #98d6e3;
+      box-shadow: 3px 3px rgb(93, 90, 90);
+      padding: 10px;
+      margin: 5px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+      text-align: center;
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <center>
+   
+    <div class="container">
+      <input type="text" class="item1" id="result">
+      <button onclick="des('1')" class="a">1</button>
+      <button onclick="des('2')" class="a">2</button>
+      <button onclick="des('3')" class="a">3</button>
+      <button onclick="des('+')" class="a">+</button>
+      <button onclick="des('4')" class="a">4</button>
+      <button onclick="des('5')" class="a">5</button>
+      <button onclick="des('6')" class="a">6</button>
+      <button onclick="des('-')" class="a">-</button>
+      <button onclick="des('7')" class="a">7</button>
+      <button onclick="des('8')" class="a">8</button>
+      <button onclick="des('9')" class="a">9</button>
+      <button onclick="des('*')" class="a">*</button>
+      <button onclick="clear()" class="a">CE</button>
+      <button onclick="des('0')" class="a">0</button>
+      <button onclick="des('.')" class="a">.</button>
+      <button onclick="des('/')" class="a">/</button>
+      <button onclick="calculate()" class="a">=</button>
+    </div>
+  </center>
+
+   <script>
+let des=(x)=>{
+    document.getElementById('result').value +=x;
+}
+let calculate=()=>{
+    let p=document.getElementById('result').value;
+    if(p==' '){
+        alert('please enter a valid expression');
+    }
+    else{
+        let q=eval(p)
+        document.getElementById('result').value=q;
+    }
+}
+let clear=()=>{
+    document.getElementById('result').value="";
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="para"></h1>
+    <script>
+     let size=parseInt(prompt("enter the size of an array"));
+     let arr1=[];
+      alert("Enter the values of Array 1");
+       for(let i=0;i<size;i++){
+        arr1[i] = parseInt(prompt("enter nos"));
+       }
+        let arr2=[];
+       alert("enter the values of Array 2") ;
+       for(let i=0;i<size;i++){
+        arr2[i]=parseInt(prompt("enter nos"));
+       }
+       for(let i=0;i<size;i++){
+        let temp=arr[i];
+        arr1[i]=arr2[j];
+        arr2[i]=temp;
+       }
+        document.write("Array1: " + arr1.join(", ") + "<br>");
+        document.write("Array2: " + arr2.join(", "));
+    </script>
+</body>
+</html>

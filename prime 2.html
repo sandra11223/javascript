@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Prime Numbers </h2>
+  <p id="result"></p>
+  <script>
+    let n=10;
+    let primes=[];
+    for(let i=2; i<=n; i++){
+      let isPrime=true;
+      for (let j=2; j<=i-1; j++){
+        if (i%j==0){
+          isPrime=false;
+          break;
+        }
+      }
+
+      if(isPrime) {
+        primes.push(i);
+      }
+    }
+    const resultElement=document.getElementById("result");
+    resultElement.textContent="Prime numbers: "+primes.join(", ");
+  </script>
+</body>
+</html>

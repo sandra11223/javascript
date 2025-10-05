@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let totalmark=parseFloat(prompt("enter the total mark percentage"));
+    let grade="";
+    if (totalmark>90){
+        grade="A";
+    } 
+    else if(totalmark>=80&&totalmark<=89){
+        grade="B";
+    }
+    else if(totalmark>=70&&totalmark<=79){
+        grade="C";
+    }
+    else if(totalmark>=60&&totalmark<=69){
+        grade="D";
+    }
+    else if(totalmark>=50&&totalmark<=59){
+         grade="E";
+    }
+    else{
+        grade="fail";
+    }
+
+    console.log("total mark percentage:",totalmark);
+    console.log("grade:",grade);
+    document.write("total mark percentage: " + totalmark + "%<br>");
+    document.write("grade: " + grade);
+
+
+    
+   </script> 
+</body>
+</html>

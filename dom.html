@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="t"></h1>
+    <h2>hellooo</h2>
+    <h3 class="good">good</h3>
+    <img id="im"src="https://cdn.pixabay.com/photo/2024/07/14/14/42/woman-8894656_1280.jpg"alt="default image"height="200px";width="200px;">
+    <div id="bg"style="width: 300px;height: 200px;background-color: lightyellow;"></div>
+    <p></p>
+    <button onclick="changeImage()">click</button>
+    <script>
+        let isChanged=false;
+        function changeImage()
+        {
+            if(isChanged){
+        document.getElementsById('im').src="https://cdn.pixabay.com/photo/2018/09/29/17/37/girl-3711845_1280.jpg;"
+        document.getElementsByTagName('h2')[0].innerHTML="hello world";
+        document.getElementsByClassName('h3')[0].innerHTML="good evening!";
+        document.getElementsByTagame('p')[0].innerHTML="this is a dom example!";
+            }
+
+        }
+    </script>
+</body>
+</html>

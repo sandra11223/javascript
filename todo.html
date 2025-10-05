@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .main{
+        background-color: rgb(255, 252, 252);
+    }
+    .first{
+        padding: 10px;
+        height: 300px;
+        width: 400px;
+        background-color: rgb(244, 244, 133);
+        
+    }
+</style>
+</head>
+<body class="main">
+    <div class="first">
+        <h2>TODOLIST</h2>
+        <label>ADD</label>
+        <input id="i">
+        <button onclick="todo()"style="color: red;">SUBMIT</button>
+    </div>
+
+    <script>
+        function todo(){
+            let value=document.getElementById('i').value
+            let para=document.createElement('p')
+            let del=document.createElement('button')
+            let delText=document.createTextNode('delete')
+            del.appendChild(delText)
+            del.style.backgroundColor="blue";
+            del.style.color="white";
+            para.appendChild(del)
+            let text=document.createTextNode(value)
+            para.appendChild(text)
+            document.body.appendChild(para)
+            del.addEventListener('click',()=>{
+                para.remove()
+
+            })
+        } 
+    </script>
+    
+</body>
+</html>

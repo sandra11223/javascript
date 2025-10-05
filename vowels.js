@@ -1,12 +1,13 @@
-let message = "  Coding is FUN when you practice consistently!  ";
-let vowels=['a','e','i','o','u','U'];
-let count=0;
-for (let char of message) {
-        if (vowels.includes(char)) {
-            count++;
+function countVowels(str){
+    str=str.toLowerCase();
+    let count=0;
+    for(let i=0;i<=str.length;i++){
+        if(
+            str[i]=="a"||str[i]=="e"||str[i]=="i"||str[i]=="o"||str[i]=="u"){
+                count++;
+            }
         }
+        return count;
     }
-    console.log(count);
-    
-
-
+    console.log(countVowels("Hello World"));
+    console.log(countVowels("Javascript"));

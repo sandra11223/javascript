@@ -21,4 +21,4 @@ if(flag==1)
 else
 {
     console.log("not palindrome");
-}
+} 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"id="num1">
+    <input type="text"id="num2">
+    <h1 id="result"></h1>
+    <button style="background-color: rgb(245, 10, 10);"onclick="calculate('add')">+</button>
+    <button style="background-color: rgb(251, 8, 8);"onclick="calculate('subtract')">-</button>
+    <button style="background-color: rgb(236, 5, 5);"onclick="calculate('multiply')">*</button>
+    <button style="background-color: rgb(235, 6, 6);"onclick="calculate('division')">%</button>
+    <script>
+        let calculate=(x)=>{
+            let result;
+            let num1=parseInt(document.getElementById('num1').value);
+            let num2=parseInt(document.getElementById('num2').value);   
+           if(!num1||!num2){
+            alert("please enter the numbers");
+           }
+           else{
+            if(x=='add'){
+                result=num1+num2;
+            }
+            else if(x=='subtract'){
+                result=num1-num2;
+            }
+            else if(x=='multiply'){
+                result=num1*num2;
+            }
+            else {
+                result=num1%num2;
+            }
+           
+        }
+        document.getElementById("result").innerHTML=result;
+        }
+    </script>
+
+    
+</body>
+</html>
