@@ -10,5 +10,3 @@ function Perfect(num){
 console.log(Perfect(6));
 console.log(Perfect(12));
 console.log(Perfect(24));
-
-

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>document</title>
+</head>
+<body>
+  <h2>Enter a Character</h2>
+  <button onclick="getCharacter()">Click to Enter</button>
+  <script>
+    function getCharacter() {
+      let userChar = prompt("Enter a character:");
+      document.write("You entered: " + userChar + "<br>");
+
+      let parsed = parseInt(userChar);
+      if (!isNaN(parsed)) {
+        document.write("Parsed integer value: " + parsed);
+      } else {
+        document.write("The input is not a number.");
+      }
+    }
+  </script>
+</body>
+</html>
